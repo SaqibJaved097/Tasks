@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Students Grades</title>
+  </head>
+  <body>
+    <script>
+  
+  class Student {
+  constructor(name, age, grades) {
+    this.name = name;
+    this.age = age;
+    this.grades = grades;
+  }
+
+  calculateAverageGrade() {
+    const sum = this.grades.reduce((acc, grade) => acc + grade);
+    return sum / this.grades.length;
+  }
+
+  printInfo() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`Grades: ${this.grades.join(', ')}`);
+    console.log(`Average Grade: ${this.calculateAverageGrade()}`);
+  }
+}
+const students = [
+  new Student('Umer', 18, [85, 90, 92]),
+  new Student('Ahmad', 19, [90, 95, 88]),
+  new Student('Usama', 20, [75, 82, 79])
+];
+
+students.forEach(student => {
+  student.printInfo();
+  console.log('--------------------------');
+});
+
+    </script>
+  </body>
+</html>
+
+  

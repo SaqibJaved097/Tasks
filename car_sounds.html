@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Car Show</title>
+    </head>
+    <body>
+        <script>
+            class Car {
+             constructor(make, model, year) {
+                 this.make = make;
+                 this.model = model;
+                 this.year = year;
+                 this.speed = 0;
+                 this.isRunning = false;
+           }
+
+  start() {
+    this.isRunning = true;
+    console.log(`The ${this.make} ${this.model} ${this.year} has started.`);
+  }
+
+  stop() {
+    this.isRunning = false;
+    this.speed = 0;
+    console.log(`The ${this.make} ${this.model} ${this.year} has stopped.`);
+  }
+
+  accelerate(speed) {
+    if (this.isRunning) {
+      this.speed += speed;
+      console.log(`The  ${this.make} ${this.model} ${this.year} is now going ${this.speed} mph.`);
+    } else {
+      console.log(`You need to start the  ${this.make} ${this.model} ${this.year} before you can accelerate it.`);
+    }
+  }
+}
+
+    const myCar = new Car("Toyota", "Camry", 2022);
+
+      myCar.start(); 
+      myCar.accelerate(30); 
+      myCar.accelerate(20);
+      myCar.stop();
+
+        </script>
+    </body>
+</html>`

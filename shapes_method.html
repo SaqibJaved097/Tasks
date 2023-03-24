@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Shapes</title>
+    </head>
+    <body>
+        <script>
+            class Shape {
+                 draw() {
+                 console.log("This is a generic shape.");
+                }
+}
+
+class Circle extends Shape {
+  draw() {
+    console.log("This is a circle.");
+  }
+}
+
+class Square extends Shape {
+  draw() {
+    console.log("This is a square.");
+  }
+}
+
+class Triangle extends Shape {
+  draw() {
+    console.log("This is a triangle.");
+  }
+}
+
+const circle = new Circle();
+const square = new Square();
+const triangle = new Triangle();
+
+    circle.draw();   
+    square.draw();    
+    triangle.draw();  
+
+        </script>
+    </body>
+</html>
